@@ -23,19 +23,25 @@ public class scannerClass {
 		System.out.println(Arrays.asList(arr));
 		
 		Scanner sc=new Scanner(System.in);
-		sc.useDelimiter("\\.");
+		//sc.useDelimiter("\\.");
 		System.out.println(sc.delimiter());
-		while(sc.hasNext())
+		while(sc.hasNextLine())
 		{
-		String str=sc.next();
-		System.out.println(scl.validUrl(str));
-			lst.add(str);
+		String str=sc.nextLine();
+		//System.out.println(scl.validUrl(str));
+			//lst.add(str);
+		System.out.println( str);
 			
 		}
 		System.out.println("Print"+ lst);
 		sc.close();
 	}
 
+	public String scanUse()
+	{
+	//	Scanner sc= new Scanner(source)
+		return null;
+	}
 	
 	public boolean validUrl(String str)
 	{

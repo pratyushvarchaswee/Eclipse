@@ -5,7 +5,12 @@ import java.util.List;
 import java8.helper.Sample;
 
 public class LamdaComparator {
+	/**
+	 * 
+	 * @param args
+	 */
 	
+	Sample [] sm = new Sample[10];
 	public static void main(String [] args)
 	{
 		Sample [] sm = new Sample[10];
@@ -19,14 +24,18 @@ public class LamdaComparator {
 		 sm[7]=new Sample("Red","850","Apple");
 		 sm[8]=new Sample("Blue","150","Apple");
 		 sm[9]=new Sample("Ornage","350","Apple");
+		
+		System.out.println(new LamdaComparator().lamdaComp(sm));
+		 
+		
+	}
+	
+	public List<Sample> lamdaComp(Sample [] sm){
 		List<Sample> lst= Arrays.asList(sm);
 		lst.sort((Sample s1, Sample s2)-> {
 		return	(s1.getName().compareTo(s2.getName())) & ( s1.getWeight().compareTo(s2.getWeight()));
 		});
-		
-		System.out.println(lst);
-		 
-		
+		return lst;
 	}
 
 }

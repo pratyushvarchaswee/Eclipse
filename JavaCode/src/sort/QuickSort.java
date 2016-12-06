@@ -6,7 +6,7 @@ public class QuickSort {
 	public static void main(String args[]) {
 		QuickSort qs = new QuickSort();
 
-		int[] arr = { 10, 15, 478, 5, 6, 790, 8, 9 };
+		int[] arr = { 7,8,9,10 };
 		
 		
 		System.out.println("Unsorted Array I/P");
@@ -19,10 +19,10 @@ public class QuickSort {
 			
 		}
 
-		qs.quickSrt(arr, 0, 7);
+		qs.quickSrt(arr, 0, 3);
 		  i = 0;
 		  System.out.println("Sorted O/P");
-		while (i < 8) {
+		while (i < 4) {
 			System.out.print( arr[i]+" ");
 			i++;
 		}
@@ -52,6 +52,7 @@ public class QuickSort {
 
 		for (int i = start; i < end; i++) {
 			if (arr[i] <= arr[end]) {
+				System.out.println("i"+i+"pindex"+pindex);
 				int temp = arr[i];
 				arr[i] = arr[pindex];
 				arr[pindex] = temp;
@@ -64,7 +65,7 @@ public class QuickSort {
 		int temp = arr[pindex];
 		arr[pindex] = arr[end];
 		arr[end] = temp;
-
+System.out.println("Pivot"+pindex);
 		return pindex;
 	}
 

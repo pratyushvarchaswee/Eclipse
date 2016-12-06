@@ -29,6 +29,11 @@ public class LamdaComparator {
 		 
 		
 	}
+	/**
+	 * This method takes array objects
+	 * @param sm
+	 * @return sorted list
+	 */
 	
 	public List<Sample> lamdaComp(Sample [] sm){
 		List<Sample> lst= Arrays.asList(sm);
